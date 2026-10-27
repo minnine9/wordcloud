@@ -83,8 +83,6 @@ function download(blob,name){const a=document.createElement('a');a.href=URL.crea
  ctx.fillStyle='#174f41';ctx.textAlign='center';ctx.textBaseline='middle';
  ctx.font='bold 55px "Malgun Gothic",sans-serif';
  ctx.fillText((topicText()?`‘${topicText()}’ 생각 구름`:'우리 반 생각 구름').slice(0,28),800,65);
- ctx.fillStyle='#738a7c';ctx.font='24px "Malgun Gothic",sans-serif';
- ctx.fillText('낱말의 크기는 등장 모둠 수(점수)에 따라 달라집니다.',800,960);
  canvas.toBlob(b=>{if(b)download(b,'너도나도_생각구름.png')},'image/png');
  if(missed)alert(`저장 이미지에 공간이 부족하여 ${missed}개 낱말이 생략되었어요.`);
 };drawTeams();draw();})();
